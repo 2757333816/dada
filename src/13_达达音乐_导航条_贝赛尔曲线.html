@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>达达音乐</title>
+    <link rel="stylesheet" href="css/12.css" />
+</head>
+<body>
+   <!--最外层父元素-->
+   <div id="wrap">
+     <!--头部元素-->
+     <div class="head">
+       <div class="head-top">
+         <!--按钮-->  
+         <h1 class="logo">
+             <a href="http://www.tmooc.cn">
+               <img src="img/logo.png" alt="" />
+             </a>
+          </h1>
+          <!--面包屑导航按钮-->
+          <a href="javascript:;" class="menuBtn"></a>
+          <!--添加一组按钮-->
+          <div class="btns">
+          <a href="javascript:;" class="search">搜索</a>
+          <a href="javascript:;">登录</a>
+          <a href="javascript:;">注册</a>
+          </div>
+       </div>
+       <div class="head-bottom">
+          <form method="post">
+             <input type="text" placeholder="请碰一下.." />
+             <input type="submit" value="搜索" />
+          </form>
+       </div>
+       <ul class="mask">
+         <li><a href="javascript:;">首页</a></li>
+         <li><a href="javascript:;">MV</a></li>
+         <li><a href="javascript:;">悦单</a></li>
+         <li><a href="javascript:;">V傍</a></li>
+         <li><a href="javascript:;">音乐</a></li>
+         <li><a href="javascript:;">商城</a></li>
+         <li><a href="javascript:;">节目</a></li>
+         <li><a href="javascript:;">饭团</a></li>
+         <li><a href="javascript:;">咨询</a></li>
+         <li><a href="javascript:;">我的家</a></li>
+         <li><a href="javascript:;">APP下载</a></li>
+         <li><a href="javascript:;">热门应用</a></li>
+       </ul>
+     </div><!--head end-->
+     <div class="content">
+       <div class="nav">
+         <ul class="list"> <!--滑动元素-->
+           <li class="active"><a href="javascript:;">首页</a></li>
+           <li><a href="javascript:;">MV</a></li>
+           <li><a href="javascript:;">悦单</a></li>
+           <li><a href="javascript:;">V榜</a></li>
+           <li><a href="javascript:;">音乐</a></li>
+           <li><a href="javascript:;">商城</a></li>
+           <li><a href="javascript:;">节目</a></li>
+           <li><a href="javascript:;">饭团</a></li>
+           <li><a href="javascript:;">咨询</a></li>
+           <li><a href="javascript:;">我的家</a></li>
+           <li><a href="javascript:;">APP下载</a></li>
+           <li><a href="javascript:;">小岳岳</a></li>
+           <li><a href="javascript:;">刚哥</a></li>
+           <li><a href="javascript:;">谦哥</a></li>
+           <li><a href="javascript:;">你</a></li>
+         </ul>
+       </div>
+     </div><!--content end-->
+   </div>
+   <script src="js/webtools.js"></script>
+    <script>
+       window.onload = function(){
+         //1:全局禁止默认行为
+         document.addEventListener("touchstart",function(ev){
+           ev=ev||event;
+           ev.preventDefault();
+         },{passive:false});
+         //2:设置rem适配方案
+         //(1)创建style元素获取布局视口宽度除16
+         //(2)将style元素追加head
+         ;(function(){
+           var styleNode = document.createElement("style");
+           var w = document.documentElement.clientWidth/16;
+           styleNode.innerHTML="html{font-size:"+w+"px!important}";
+           document.head.appendChild(styleNode);
+         })();
+
+
+         //添加测试数据
+         //;(function(){
+         //  for(var i=0;i<200;i++){
+         //     wrap.innerHTML+="abc<br />";
+         //  }
+         //})()
+        
+         //(6)任务一:通过js实现输入框获取焦点功能
+         changeFocus();
+         function changeFocus(){
+           //1.1:获取元素当用户触碰元素获取焦点
+           //1:获取输入框
+           var inputText = document.querySelector("#wrap .head .head-bottom form input[type='text']");
+           //2:为输入框绑定事件 touchstart
+           inputText.addEventListener("touchstart",function(ev){
+            ev=ev||event;
+            //3:当前元素获取焦点
+            this.focus();
+            //4:阻止事件冒泡
+            ev.stopPropagation(); 
+            //5:阻止事件默认行为
+            ev.preventDefault();
+           })
+           //1.2:如果用户触碰其它元素失去焦点
+           //1:为docuemnt元素绑定事件touchstart
+           document.addEventListener("touchstart",(ev)=>{
+             ev=ev||event;
+             inputText.blur();//2:输入框失去焦点
+           })
+         }//changedFocus end
+
+
+        //任务一:完成遮罩层点击切换效果 start
+        CMCFMenuBtn();
+        function CMCFMenuBtn(){
+          //1:获取频道按钮元素
+          var menuBtn=document.querySelector("#wrap .head .head-top .menuBtn");
+          //2:获取遮罩层
+          var mask=document.querySelector("#wrap .head .mask");
+          //2.1:创建变量保存状态 频道/X
+          var isXBtn = false;
+          //3:为频道按钮绑定事件 touchstart
+          menuBtn.addEventListener("touchstart",function(ev){
+            ev=ev||event;
+            //3.1:如果是频道显示遮罩层
+            if(isXBtn){
+              webtools.removeClass(menuBtn,"active")
+              mask.style.display="none";//隐藏遮罩层
+            }else{
+              webtools.addClass(menuBtn,"active");
+              mask.style.display="block";//显示遮罩层
+            }
+            isXBtn=!isXBtn;
+            //3.2:如果是X隐藏遮罩层
+            //3.3:修改状态按钮值
+            //########解决事件传递
+            ev.stopPropagation();
+            ev.preventDefault();
+          })
+        
+          //如果点击其它位置则隐藏
+          document.addEventListener("touchstart",function(){
+           //4:如果当前是X按钮
+           if(isXBtn){
+            //4.1:将遮罩层隐藏效果
+            mask.style.display="none";
+            //4.2:将按钮class删除,按钮恢复频道按钮
+            webtools.removeClass(menuBtn,"active");
+            //4.3:切换状态
+            isXBtn=!isXBtn;
+           }
+          })
+
+          //如果点击遮罩层上不隐藏
+          mask.addEventListener("touchstart",function(ev){
+            ev=ev||event;
+            ev.stopPropagation();
+            ev.preventDefault();
+          })
+
+        }//CMCFMenuBtn end
+        //任务一:完成遮罩层点击切换效果 end
+
+
+
+       //任务二:
+       //滑屏 start
+       drag()
+       function drag(){
+         //1:获取滑屏区域
+         var wrap = document.querySelector("#wrap .content .nav");
+        //2:获取滑屏元素
+         var item = document.querySelector("#wrap .content .nav .list");
+         //3:创建变量保存手指开始位置
+         var startX=0;
+         var elementX=0;
+         //4:创建变量保存元素位置
+         //5:为滑屏区域绑定事件 start
+
+         //快速滑屏 version 12
+         //6:创建四个变量
+         //6.1:上一个位置:触发时间
+         var lastTime = 0;
+         //6.2:上一个位置:开始位置
+         var lastPoint = 0;
+         //6.3:时间差:
+         var timeDis = 1;
+         //6.4:位置差:
+         var pointDis = 0;
+
+
+         //边界判断
+         //滑屏区域-滑屏元素=minX
+         var minX = wrap.clientWidth-item.offsetWidth;
+         wrap.addEventListener("touchstart",function(ev){
+            ev=ev||event;
+            var touchC = ev.changedTouches[0];
+            startX=touchC.clientX;
+            elementX=webtools.css(item,"translateX");
+            item.style.transition="none";
+
+            //version 12
+            //获取开始时间与开始位置
+            lastTime = new Date().getTime();
+            lastPoint = webtools.css(item,"translateX");
+            //清除位置差?
+            pointDis = 0;
+         })
+         //6:为滑屏区域绑定事件 move
+         wrap.addEventListener("touchmove",function(ev){
+            ev=ev||event;
+            var touchC = ev.changedTouches[0];
+            var nowX = touchC.clientX;
+            var disX = nowX-startX;
+            var translateX = elementX+disX;
+            //左侧像皮盘效果(当网页显示第一组内容向右滑)
+            //在move 的过程序中
+            //每一次move元素移动距离慢慢变小
+            //0.5 0.4 0.3 ...
+            var vw = document.documentElement.clientWidth;
+            if(translateX>0){//向右移动到边界
+              //scale 拖动距离系数 0.9 0.8..
+              var scale = vw/((vw+translateX)*1.5);
+              //实际移动位置=disX移动距离*系数
+              translateX=elementX+disX*scale;
+            }else if(translateX<minX){//向左移动到边界
+              var over = minX - translateX;
+              //console.log("1:"+over);
+              var scale = vw/((vw+over)*1.5);
+              translateX = elementX+disX*scale;
+            }
+            webtools.css(item,"translateX",translateX);
+            //version 12
+            //获取当前时间点与位置
+            var nowTime = new Date().getTime();
+            var nowPoint = webtools.css(item,"translateX");
+            //计算时间差与位置差
+            //console.log(nowPoint+":"+lastPoint);
+            timeDis = nowTime -  lastTime;
+            pointDis = nowPoint - lastPoint;
+
+            //对上一个点覆盖
+            lastTime = nowTime;
+            lastPoint = nowPoint;
+            //console.log("1:"+pointDis);
+
+         })
+         wrap.addEventListener("touchend",function(ev){
+            ev=ev||event;
+            //1:获取translateX;
+            var translateX = webtools.css(item,"translateX");
+
+           //version 12
+           //计算速度=距离/时间
+           var speed = pointDis/timeDis;
+           //调速度速
+           speed = Math.abs(speed)<0.5?0:speed;
+           var targetX=translateX+speed*200;
+
+           //version 13
+           var bsr = "";
+           if(targetX>0){ //最左侧
+             targetX=0;
+             bsr = "cubic-bezier(.27,1.25,.66,1.57) ";
+           }else if(targetX<minX){ //最右侧
+             targetX=minX;
+             bsr = "cubic-bezier(.27,1.25,.66,1.57) ";
+           }
+           //2:添加过渡1s效果 
+           item.style.transition="1s "+bsr+"transform";
+           webtools.css(item,"translateX",targetX);
+         });
+       }//drag end
+       }//window.onload end    
+    </script>
+</body>
+</html>
