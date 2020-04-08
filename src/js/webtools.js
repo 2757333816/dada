@@ -135,7 +135,8 @@
        
        //是否是X轴方向滑动
        var isX = true;
-       //是否是首次滑动
+       //是否是首次滑动操作
+       //判断条以首次为准
        var isFirst = true;
 
 
@@ -157,17 +158,46 @@
                //4:修改translateX值
                webtools.css(ulNode,"translateX",index*vw);
            }
+           //version 15
+           //1:获取手指触碰屏幕开始位置
            startX=TouchC.clientX;
+           startY=TouchC.clientY;
+           //2:设置默认方向水平
+           //事件:触发开始,每一次新开始滑动操作默认水平方向
+           isX = true;
+           //第一次滑动操作默认值
+           isFirst = true;
+
            elementX=webtools.css(ulNode,"translateX");
-           //version 7
-           //清除定时器
+           elementY=webtools.css(ulNode,"translateY");
            clearInterval(timer);
        });
        carouselWrap.addEventListener("touchmove",(ev)=>{
+           //第一次拦截垂直方向操作
+           if(!isX){
+             return;//看门狗:每一次咬住不守规则用户
+           }
            ev=ev||event;
            var TouchC = ev.changedTouches[0];
+           //version 15
            var nowX = TouchC.clientX;
+           var nowY = TouchC.clientY;
+           //计算滑动距离
            var disX = nowX-startX;
+           var disY = nowY-startY;
+           //console.log(disX+":"+disY);
+
+           //判断是否第一次操作判断
+           if(isFirst){
+             isFirst = false;//判断过不是第一次
+            //判断方向只判断第一次
+            if(Math.abs(disX)<Math.abs(disY)){//垂直方向距离大于水平方向
+                isX=false;//垂直方向
+                return;
+            }
+          }
+
+
            webtools.css(ulNode,"translateX",elementX+disX);
        });
        carouselWrap.addEventListener("touchend",(ev)=>{
@@ -181,13 +211,6 @@
               index=1-arr.length;
            }
 
-           //下标
-           //1:清空所有下标active class
-           //for(var i=0;i<pointslength;i++){
-           //    pointsSpan[i].classList.remove("active");
-           //}
-           //2:当前下标 index%pointslength 添加active
-           //pointsSpan[-index%pointslength].classList.add("active") 
            points(index);
            if(needAuto){
                auto();

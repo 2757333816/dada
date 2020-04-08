@@ -37,10 +37,56 @@ button {
 img {
   display: block;
 }
+.carousel-wrap {
+  position: relative;
+}
+.carousel-wrap > .list {
+  list-style-type: none;
+  position: absolute;
+  overflow: hidden;
+}
+.carousel-wrap > .list > li {
+  float: left;
+}
+.carousel-wrap > .list > li > a {
+  display: block;
+}
+.carousel-wrap > .list > li > a > img {
+  width: 100%;
+  display: block;
+}
+.carousel-wrap > .points-wrap {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+.carousel-wrap > .points-wrap > span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: green;
+  margin-left: 5px;
+}
+.carousel-wrap > .points-wrap > span.active {
+  background-color: deeppink;
+}
+.clearfix,
+#wrap .content .tap-wrap .tap-content ul {
+  *zoom: 1;
+}
+.clearfix:after,
+#wrap .content .tap-wrap .tap-content ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
 #wrap {
   height: 100%;
   font-size: 0.23703704rem;
-  overflow: hidden;
+  overflow: auto;
   background: #EEEEEE;
   position: relative;
 }
@@ -220,11 +266,110 @@ img {
   display: inline-block;
 }
 #wrap .content .nav .list > li a {
+  display: block;
+  height: 100%;
+  padding: 0 0.56296296rem;
   color: #020202;
 }
-#wrap .content .nav .list > li.active {
+#wrap .content .nav .list > li a.active {
   background: #690;
-}
-#wrap .content .nav .list > li.active a {
   color: #fff;
+}
+#wrap .content .tap-wrap {
+  /*标签页:选项卡*/
+  overflow: auto;
+  width: 15.4962963rem;
+  background: #FFFFFF;
+  margin: 0 auto;
+}
+#wrap .content .tap-wrap .tap-head {
+  height: 2rem;
+  line-height: 2rem;
+}
+#wrap .content .tap-wrap .tap-head h2 {
+  float: left;
+  font-size: 1rem;
+}
+#wrap .content .tap-wrap .tap-head span {
+  float: right;
+  font-size: 0.8rem;
+}
+#wrap .content .tap-wrap .tap-nav {
+  position: relative;
+  height: 1.55555556rem;
+  line-height: 1.55555556rem;
+}
+#wrap .content .tap-wrap .tap-nav a {
+  float: left;
+  height: 1.55555556rem;
+  margin-right: 0.2962963rem;
+  font-size: 0.65185185rem;
+  text-align: center;
+  color: #6b6b6b;
+}
+#wrap .content .tap-wrap .tap-nav .smallG {
+  position: absolute;
+  left: 0;
+  width: 1.48148148rem;
+  /*测试用*/
+  bottom: 0.14814815rem;
+  height: 0.13333333rem;
+  background: #6f900d;
+  transition: 1s transform,1s width;
+}
+#wrap .content .tap-wrap .tap-content {
+  width: 300%;
+}
+#wrap .content .tap-wrap .tap-content ul {
+  float: left;
+  width: 33.33333%;
+}
+#wrap .content .tap-wrap .tap-content ul li {
+  box-sizing: border-box;
+  width: 7.4962963rem;
+  margin: 0.11851852rem;
+  padding: 0.07407407rem;
+  background: #efefef;
+  color: #000000;
+  overflow: hidden;
+  float: left;
+}
+#wrap .content .tap-wrap .tap-content ul li a img {
+  width: 100%;
+}
+#wrap .content .tap-wrap .tap-content ul li a span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #605e5e;
+}
+#wrap .content .tap-wrap .tap-content ul li .tap-discuss .right {
+  float: left;
+  margin-right: 0.44444444rem;
+  vertical-align: middle;
+}
+#wrap .content .tap-wrap .tap-content ul li .tap-discuss .right span:nth-child(1) {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: url(../img/ice.png) no-repeat;
+}
+#wrap .content .tap-wrap .tap-content ul li .tap-discuss .left {
+  float: left;
+  vertical-align: middle;
+}
+#wrap .content .tap-wrap .tap-content ul li .tap-discuss .left span:nth-child(1) {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  background: url(../img/ice.png) no-repeat;
+  background-position: 0 -0.8rem;
+}
+#wrap .content .tap-wrap .tap-content .tap-loading {
+  background: url(../img/loading.gif) no-repeat;
+  background-position: center;
+  opacity: 1;
+  /*默认隐藏*/
+  height: 100px;
 }

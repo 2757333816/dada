@@ -19,10 +19,14 @@ img{display: block}
 @rem:1080/16rem;
 //引入1物理像素边线
 @import "mix/1-px";
+//引入无缝滑屏
+@import "carousel";
+//引入清除浮动
+@import "extend/clearfix";
 #wrap{
     height: 100%;
     font-size:16/@rem;
-    overflow: hidden;
+    overflow: auto;
     background: #EEEEEE;
     position: relative;
     .head{
@@ -177,6 +181,106 @@ img{display: block}
                }
             }
         }
+        .tap-wrap{/*标签页:选项卡*/
+           overflow: auto;
+           width:1046/@rem;
+           background: #FFFFFF;
+           margin:0 auto;
+           .tap-head{
+               height: 135/@rem;
+               line-height: 135/@rem;
+               h2{
+                   float:left;
+                   font-size:1rem;
+               }
+               span{
+                   float:right;
+                   font-size:.8rem;
+               }
+           }
+           .tap-nav{
+               position: relative;
+               height: 105/@rem;
+               line-height: 105/@rem;
+               a{
+                   float:left;
+                   height: 105/@rem;
+                   margin-right: 20/@rem;
+                   font-size:44/@rem;
+                   text-align: center;
+                   color:#6b6b6b;
+               }
+               .smallG{
+                   position: absolute;
+                   left:0;
+                   width:100/@rem;/*测试用*/
+                   bottom:10/@rem;
+                   height:9/@rem;
+                   background: #6f900d;
+                   transition: 1s transform,1s width;
+               }
+           }
+           .tap-content{
+              width:300%;
+              ul{
+                 &:extend(.clearfix all);
+                 float:left;
+                 width:33.33333%;
+                 li{
+                    box-sizing: border-box;
+                    width:506/@rem;
+                    margin:8/@rem;
+                    padding:5/@rem;
+                    background:#efefef;
+                    color:#000000;
+                    overflow: hidden;
+                    float:left;
+                    a{
+                        img{
+                            width:100%;
+                        }
+                        span{
+                           display: block;
+                           overflow: hidden;
+                           text-overflow: ellipsis;
+                           white-space: nowrap;
+                           color:#605e5e; 
+                        }
+                    }
+                    .tap-discuss{
+                         .right{
+                            float:left;
+                            margin-right:30/@rem;
+                            vertical-align: middle;
+                            span:nth-child(1){
+                                display: inline-block;
+                                width:.5rem;
+                                height: .5rem;
+                                background: url(../img/ice.png) no-repeat;
+                            } 
+                         }
+                         .left{
+                            float:left;
+                            vertical-align: middle;
+                            span:nth-child(1){
+                                display: inline-block;
+                                width:.5rem;
+                                height:.5rem;
+                                background: url(../img/ice.png) no-repeat;
+                                background-position: 0 -0.8rem;
+                            } 
+                         }
+                    } 
+                 } 
+              }
+              .tap-loading{
+                  background: url(../img/loading.gif) no-repeat;
+                  background-position: center;
+                  opacity: 1;/*默认隐藏*/
+                  height: 100px;
+              }
+           } 
+        }
     }
 
-}//wrap end   12:10
+}//wrap end
