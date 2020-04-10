@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     *{margin:0;padding:0}
+     #test{
+         width:200px;
+         height:200px;
+         background: pink;
+     }
+    </style>
+</head>
+<body>
+     <div id="test"></div>
+     <script>
+         //使用定时器实现元素移动
+         var i = 0;
+         setInterval(function(){
+             i++;
+            //test.style.transform="translateY("+i+"px)";
+            //开启3D硬件加速
+            test.style.transform="translateZ(0) translateY("+i+"px)";
+            
+         },200);
+     </script>
+</body>
+</html>
