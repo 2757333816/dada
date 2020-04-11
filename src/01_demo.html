@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>竖向滑屏作</title>
+    <style>
+       *{margin:0;padding:0}
+       html,body{
+         height: 100%;
+         overflow: hidden;
+       }
+       #wrap{
+         height: 100%;
+         overflow: hidden;
+         background: pink;
+       }
+    </style>
+</head>
+<body>
+     <!--h3>竖向滑屏操作 demo</h3-->   
+     <div id="wrap">
+       <div class="content"></div>
+     </div>
+<script src="js/webtools.js"></script>
+<script>
+  window.onload = function(){
+
+    //全局阻止默认行为 滑动
+    document.addEventListener("touchstart",function(ev){
+      ev=ev||event;
+			console.log("ev",ev)
+      ev.preventDefault();
+    });
+    var wrap = document.querySelector("#wrap");
+    var content = document.querySelector("#wrap .content");
+    for(var i=0;i<500;i++){
+      content.innerHTML+= `${i}达达 <br />`;
+    }
+
+    //将滑屏区域赋值函数
+    //yMove 垂直滑动函数
+    webtools.yMove(wrap);
+  }
+</script>     
+</body>
+</html>
