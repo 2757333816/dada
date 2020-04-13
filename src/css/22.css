@@ -310,8 +310,7 @@ img {
 #wrap .content .tap-wrap .tap-nav .smallG {
   position: absolute;
   left: 0;
-  width: 1.48148148rem;
-  /*测试用*/
+  /*width:100/@rem;测试用*/
   bottom: 0.14814815rem;
   height: 0.13333333rem;
   background: #6f900d;
@@ -365,4 +364,22 @@ img {
   height: 0.5rem;
   background: url(../img/ice.png) no-repeat;
   background-position: 0 -0.8rem;
+}
+#wrap .content .tap-wrap .tap-content .tap-loading {
+  background: url(../img/loading.gif) no-repeat;
+  background-position: center;
+  opacity: 0;
+  /*默认隐藏*/
+  height: 100px;
+}
+#wrap .scrollBar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: deeppink;
+  z-index: 9;
+  transition: 1s opacity ;
+  opacity: 0;
 }

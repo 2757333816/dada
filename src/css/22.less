@@ -213,7 +213,7 @@ img{display: block}
                .smallG{
                    position: absolute;
                    left:0;
-                   width:100/@rem;/*测试用*/
+                   /*width:100/@rem;测试用*/
                    bottom:10/@rem;
                    height:9/@rem;
                    background: #6f900d;
@@ -273,8 +273,25 @@ img{display: block}
                     } 
                  } 
               }
+              .tap-loading{
+                  background: url(../img/loading.gif) no-repeat;
+                  background-position: center;
+                  opacity: 0;/*默认隐藏*/
+                  height: 100px;
+              }
            } 
         }
+    }
+    .scrollBar{
+        position: absolute;
+        right:0;
+        top:0;
+        width:4px;
+        height:100%;
+        background: deeppink;
+        z-index: 9;
+        transition: 1s opacity ;
+        opacity: 0;
     }
 
 }//wrap end

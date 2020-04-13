@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>达达音乐</title>
+    <link rel="stylesheet" href="css/22.css" />
+</head>
+<body>
+   <!--最外层父元素-->
+   <div id="wrap">
+     <!--垂直滚动条-->
+     <div class="scrollBar"></div>
+     <!--头部元素-->
+     <div class="head">
+       <div class="head-top">
+         <!--按钮-->  
+         <h1 class="logo">
+             <a href="http://www.tmooc.cn">
+               <img src="img/logo.png" alt="" />
+             </a>
+          </h1>
+          <!--面包屑导航按钮-->
+          <a href="javascript:;" class="menuBtn"></a>
+          <!--添加一组按钮-->
+          <div class="btns">
+          <a href="javascript:;" class="search">搜索</a>
+          <a href="javascript:;">登录</a>
+          <a href="javascript:;">注册</a>
+          </div>
+       </div>
+       <div class="head-bottom">
+          <form method="post">
+             <input type="text" placeholder="请碰一下.." />
+             <input type="submit" value="搜索" />
+          </form>
+       </div>
+       <ul class="mask">
+         <li><a href="javascript:;">首页</a></li>
+         <li><a href="javascript:;">MV</a></li>
+         <li><a href="javascript:;">悦单</a></li>
+         <li><a href="javascript:;">V傍</a></li>
+         <li><a href="javascript:;">音乐</a></li>
+         <li><a href="javascript:;">商城</a></li>
+         <li><a href="javascript:;">节目</a></li>
+         <li><a href="javascript:;">饭团</a></li>
+         <li><a href="javascript:;">咨询</a></li>
+         <li><a href="javascript:;">我的家</a></li>
+         <li><a href="javascript:;">APP下载</a></li>
+         <li><a href="javascript:;">热门应用</a></li>
+       </ul>
+     </div><!--head end-->
+     <div class="content">
+       <div>
+        <div class="nav">
+         <ul class="list"> <!--滑动元素-->
+           <li><a href="javascript:;"  class="active">首页</a></li>
+           <li><a href="javascript:;">MV</a></li>
+           <li><a href="javascript:;">悦单</a></li>
+           <li><a href="javascript:;">V榜</a></li>
+           <li><a href="javascript:;">音乐</a></li>
+           <li><a href="javascript:;">商城</a></li>
+           <li><a href="javascript:;">节目</a></li>
+           <li><a href="javascript:;">饭团</a></li>
+           <li><a href="javascript:;">咨询</a></li>
+           <li><a href="javascript:;">我的家</a></li>
+           <li><a href="javascript:;">APP下载</a></li>
+           <li><a href="javascript:;">小岳岳</a></li>
+           <li><a href="javascript:;">刚哥</a></li>
+           <li><a href="javascript:;">谦哥</a></li>
+           <li><a href="javascript:;">你</a></li>
+         </ul>
+        </div>
+        <div class="carousel-wrap" needAuto needCarousel>
+          <div class="points-wrap"></div>
+        </div><!--carousel end-->
+        <!--标签tab开始 start-->
+        <div class="tap-wrap">
+           <div class="tap-head">
+             <h2>MV主播</h2>
+             <span>更多&gt;</span>
+           </div>
+           <div class="tap-nav">
+             <a href="javascript:;">全部</a>
+             <a href="javascript:;">内地</a>
+             <a href="javascript:;">港台</a>
+             <a href="javascript:;">欧美</a>
+             <a href="javascript:;">非洲大草原</a>
+             <a href="javascript:;">韩国</a>
+             <!--滑动小绿条-->
+             <div class="smallG"></div>
+           </div>
+           <div class="tap-content">
+             <ul class="tap-loading"></ul>
+             <ul>
+               <li>
+                 <a href="javascript:;">
+                   <img src="img/a.jpg" alt="" />
+                   <span>泡菜啊！泡菜啊！泡菜啊！
+                      泡菜啊！泡菜啊！泡菜啊!
+                   </span>
+                </a>
+                <div class="tap-discuss">
+                   <div class="right">
+                     <span></span><!--小图片 播放次数-->
+                     <span>9176</span>
+                   </div>
+                   <div class="left">
+                     <span></span><!--小图片 留言次数-->
+                     <span>6</span>
+                   </div>
+                </div>
+              </li>
+              <li>
+                  <a href="javascript:;">
+                    <img src="img/b.jpg" alt="" />
+                    <span>泡菜啊！泡菜啊！泡菜啊！
+                       泡菜啊！泡菜啊！泡菜啊!
+                    </span>
+                 </a>
+                 <div class="tap-discuss">
+                    <div class="right">
+                      <span></span><!--小图片 播放次数-->
+                      <span>9176</span>
+                    </div>
+                    <div class="left">
+                      <span></span><!--小图片 留言次数-->
+                      <span>6</span>
+                    </div>
+                 </div>
+               </li>
+               <li>
+                  <a href="javascript:;">
+                    <img src="img/c.jpg" alt="" />
+                    <span>泡菜啊！泡菜啊！泡菜啊！
+                       泡菜啊！泡菜啊！泡菜啊!
+                    </span>
+                 </a>
+                 <div class="tap-discuss">
+                    <div class="right">
+                      <span></span><!--小图片 播放次数-->
+                      <span>9176</span>
+                    </div>
+                    <div class="left">
+                      <span></span><!--小图片 留言次数-->
+                      <span>6</span>
+                    </div>
+                 </div>
+               </li>
+               <li>
+                  <a href="javascript:;">
+                    <img src="img/d.jpg" alt="" />
+                    <span>泡菜啊！泡菜啊！泡菜啊！
+                       泡菜啊！泡菜啊！泡菜啊!
+                    </span>
+                 </a>
+                 <div class="tap-discuss">
+                    <div class="right">
+                      <span></span><!--小图片 播放次数-->
+                      <span>9176</span>
+                    </div>
+                    <div class="left">
+                      <span></span><!--小图片 留言次数-->
+                      <span>6</span>
+                    </div>
+                 </div>
+               </li>
+               <li>
+                  <a href="javascript:;">
+                    <img src="img/e.jpg" alt="" />
+                    <span>泡菜啊！泡菜啊！泡菜啊！
+                       泡菜啊！泡菜啊！泡菜啊!
+                    </span>
+                 </a>
+                 <div class="tap-discuss">
+                    <div class="right">
+                      <span></span><!--小图片 播放次数-->
+                      <span>9176</span>
+                    </div>
+                    <div class="left">
+                      <span></span><!--小图片 留言次数-->
+                      <span>6</span>
+                    </div>
+                 </div>
+               </li>
+               <li>
+                  <a href="javascript:;">
+                    <img src="img/f.jpg" alt="" />
+                    <span>泡菜啊！泡菜啊！泡菜啊！
+                       泡菜啊！泡菜啊！泡菜啊!
+                    </span>
+                 </a>
+                 <div class="tap-discuss">
+                    <div class="right">
+                      <span></span><!--小图片 播放次数-->
+                      <span>9176</span>
+                    </div>
+                    <div class="left">
+                      <span></span><!--小图片 留言次数-->
+                      <span>6</span>
+                    </div>
+                 </div>
+               </li>
+                   
+             </ul>
+             <ul class="tap-loading"></ul>
+           </div>
+        </div>
+        <div class="tap-wrap">
+          <div class="tap-head">
+            <h2>MV主播</h2>
+            <span>更多&gt;</span>
+          </div>
+          <div class="tap-nav">
+            <a href="javascript:;">全部</a>
+            <a href="javascript:;">内地</a>
+            <a href="javascript:;">港台</a>
+            <a href="javascript:;">欧美</a>
+            <a href="javascript:;">非洲大草原</a>
+            <a href="javascript:;">韩国</a>
+            <!--滑动小绿条-->
+            <div class="smallG"></div>
+          </div>
+          <div class="tap-content">
+            <ul class="tap-loading"></ul>
+            <ul>
+              <li>
+                <a href="javascript:;">
+                  <img src="img/a.jpg" alt="" />
+                  <span>泡菜啊！泡菜啊！泡菜啊！
+                     泡菜啊！泡菜啊！泡菜啊!
+                  </span>
+               </a>
+               <div class="tap-discuss">
+                  <div class="right">
+                    <span></span><!--小图片 播放次数-->
+                    <span>9176</span>
+                  </div>
+                  <div class="left">
+                    <span></span><!--小图片 留言次数-->
+                    <span>6</span>
+                  </div>
+               </div>
+             </li>
+             <li>
+                 <a href="javascript:;">
+                   <img src="img/b.jpg" alt="" />
+                   <span>泡菜啊！泡菜啊！泡菜啊！
+                      泡菜啊！泡菜啊！泡菜啊!
+                   </span>
+                </a>
+                <div class="tap-discuss">
+                   <div class="right">
+                     <span></span><!--小图片 播放次数-->
+                     <span>9176</span>
+                   </div>
+                   <div class="left">
+                     <span></span><!--小图片 留言次数-->
+                     <span>6</span>
+                   </div>
+                </div>
+              </li>
+              <li>
+                 <a href="javascript:;">
+                   <img src="img/c.jpg" alt="" />
+                   <span>泡菜啊！泡菜啊！泡菜啊！
+                      泡菜啊！泡菜啊！泡菜啊!
+                   </span>
+                </a>
+                <div class="tap-discuss">
+                   <div class="right">
+                     <span></span><!--小图片 播放次数-->
+                     <span>9176</span>
+                   </div>
+                   <div class="left">
+                     <span></span><!--小图片 留言次数-->
+                     <span>6</span>
+                   </div>
+                </div>
+              </li>
+              <li>
+                 <a href="javascript:;">
+                   <img src="img/d.jpg" alt="" />
+                   <span>泡菜啊！泡菜啊！泡菜啊！
+                      泡菜啊！泡菜啊！泡菜啊!
+                   </span>
+                </a>
+                <div class="tap-discuss">
+                   <div class="right">
+                     <span></span><!--小图片 播放次数-->
+                     <span>9176</span>
+                   </div>
+                   <div class="left">
+                     <span></span><!--小图片 留言次数-->
+                     <span>6</span>
+                   </div>
+                </div>
+              </li>
+              <li>
+                 <a href="javascript:;">
+                   <img src="img/e.jpg" alt="" />
+                   <span>泡菜啊！泡菜啊！泡菜啊！
+                      泡菜啊！泡菜啊！泡菜啊!
+                   </span>
+                </a>
+                <div class="tap-discuss">
+                   <div class="right">
+                     <span></span><!--小图片 播放次数-->
+                     <span>9176</span>
+                   </div>
+                   <div class="left">
+                     <span></span><!--小图片 留言次数-->
+                     <span>6</span>
+                   </div>
+                </div>
+              </li>
+              <li>
+                 <a href="javascript:;">
+                   <img src="img/f.jpg" alt="" />
+                   <span>泡菜啊！泡菜啊！泡菜啊！
+                      泡菜啊！泡菜啊！泡菜啊!
+                   </span>
+                </a>
+                <div class="tap-discuss">
+                   <div class="right">
+                     <span></span><!--小图片 播放次数-->
+                     <span>9176</span>
+                   </div>
+                   <div class="left">
+                     <span></span><!--小图片 留言次数-->
+                     <span>6</span>
+                   </div>
+                </div>
+              </li>
+                  
+            </ul>
+            <ul class="tap-loading"></ul>
+          </div>
+        </div>
+        <div class="tap-wrap">
+            <div class="tap-head">
+              <h2>MV主播</h2>
+              <span>更多&gt;</span>
+            </div>
+            <div class="tap-nav">
+              <a href="javascript:;">全部</a>
+              <a href="javascript:;">内地</a>
+              <a href="javascript:;">港台</a>
+              <a href="javascript:;">欧美</a>
+              <a href="javascript:;">非洲大草原</a>
+              <a href="javascript:;">韩国</a>
+              <!--滑动小绿条-->
+              <div class="smallG"></div>
+            </div>
+            <div class="tap-content">
+              <ul class="tap-loading"></ul>
+              <ul>
+                <li>
+                  <a href="javascript:;">
+                    <img src="img/a.jpg" alt="" />
+                    <span>泡菜啊！泡菜啊！泡菜啊！
+                       泡菜啊！泡菜啊！泡菜啊!
+                    </span>
+                 </a>
+                 <div class="tap-discuss">
+                    <div class="right">
+                      <span></span><!--小图片 播放次数-->
+                      <span>9176</span>
+                    </div>
+                    <div class="left">
+                      <span></span><!--小图片 留言次数-->
+                      <span>6</span>
+                    </div>
+                 </div>
+               </li>
+               <li>
+                   <a href="javascript:;">
+                     <img src="img/b.jpg" alt="" />
+                     <span>泡菜啊！泡菜啊！泡菜啊！
+                        泡菜啊！泡菜啊！泡菜啊!
+                     </span>
+                  </a>
+                  <div class="tap-discuss">
+                     <div class="right">
+                       <span></span><!--小图片 播放次数-->
+                       <span>9176</span>
+                     </div>
+                     <div class="left">
+                       <span></span><!--小图片 留言次数-->
+                       <span>6</span>
+                     </div>
+                  </div>
+                </li>
+                <li>
+                   <a href="javascript:;">
+                     <img src="img/c.jpg" alt="" />
+                     <span>泡菜啊！泡菜啊！泡菜啊！
+                        泡菜啊！泡菜啊！泡菜啊!
+                     </span>
+                  </a>
+                  <div class="tap-discuss">
+                     <div class="right">
+                       <span></span><!--小图片 播放次数-->
+                       <span>9176</span>
+                     </div>
+                     <div class="left">
+                       <span></span><!--小图片 留言次数-->
+                       <span>6</span>
+                     </div>
+                  </div>
+                </li>
+                <li>
+                   <a href="javascript:;">
+                     <img src="img/d.jpg" alt="" />
+                     <span>泡菜啊！泡菜啊！泡菜啊！
+                        泡菜啊！泡菜啊！泡菜啊!
+                     </span>
+                  </a>
+                  <div class="tap-discuss">
+                     <div class="right">
+                       <span></span><!--小图片 播放次数-->
+                       <span>9176</span>
+                     </div>
+                     <div class="left">
+                       <span></span><!--小图片 留言次数-->
+                       <span>6</span>
+                     </div>
+                  </div>
+                </li>
+                <li>
+                   <a href="javascript:;">
+                     <img src="img/e.jpg" alt="" />
+                     <span>泡菜啊！泡菜啊！泡菜啊！
+                        泡菜啊！泡菜啊！泡菜啊!
+                     </span>
+                  </a>
+                  <div class="tap-discuss">
+                     <div class="right">
+                       <span></span><!--小图片 播放次数-->
+                       <span>9176</span>
+                     </div>
+                     <div class="left">
+                       <span></span><!--小图片 留言次数-->
+                       <span>6</span>
+                     </div>
+                  </div>
+                </li>
+                <li>
+                   <a href="javascript:;">
+                     <img src="img/f.jpg" alt="" />
+                     <span>泡菜啊！泡菜啊！泡菜啊！
+                        泡菜啊！泡菜啊！泡菜啊!
+                     </span>
+                  </a>
+                  <div class="tap-discuss">
+                     <div class="right">
+                       <span></span><!--小图片 播放次数-->
+                       <span>9176</span>
+                     </div>
+                     <div class="left">
+                       <span></span><!--小图片 留言次数-->
+                       <span>6</span>
+                     </div>
+                  </div>
+                </li>
+                    
+              </ul>
+              <ul class="tap-loading"></ul>
+            </div>
+          </div>        
+      </div>      
+       <!--标签tab开始 end-->
+     </div><!--content end-->
+   </div>
+   <script src="js/webtools.js"></script>
+    <script>
+       window.onload = function(){
+         //1:全局禁止默认行为
+         document.addEventListener("touchstart",function(ev){
+           ev=ev||event;
+           ev.preventDefault();
+         },{passive:false});
+         //2:设置rem适配方案
+         //(1)创建style元素获取布局视口宽度除16
+         //(2)将style元素追加head
+         ;(function(){
+           var styleNode = document.createElement("style");
+           var w = document.documentElement.clientWidth/16;
+           styleNode.innerHTML="html{font-size:"+w+"px!important}";
+           document.head.appendChild(styleNode);
+         })();
+
+
+         //添加测试数据
+         //;(function(){
+         //  for(var i=0;i<200;i++){
+         //     wrap.innerHTML+="abc<br />";
+         //  }
+         //})()
+        
+         //(6)任务一:通过js实现输入框获取焦点功能
+         changeFocus();
+         function changeFocus(){
+           //1.1:获取元素当用户触碰元素获取焦点
+           //1:获取输入框
+           var inputText = document.querySelector("#wrap .head .head-bottom form input[type='text']");
+           //2:为输入框绑定事件 touchstart
+           inputText.addEventListener("touchstart",function(ev){
+            ev=ev||event;
+            //3:当前元素获取焦点
+            this.focus();
+            //4:阻止事件冒泡
+            ev.stopPropagation(); 
+            //5:阻止事件默认行为
+            ev.preventDefault();
+           })
+           //1.2:如果用户触碰其它元素失去焦点
+           //1:为docuemnt元素绑定事件touchstart
+           document.addEventListener("touchstart",(ev)=>{
+             ev=ev||event;
+             inputText.blur();//2:输入框失去焦点
+           })
+         }//changedFocus end
+
+
+        //任务一:完成遮罩层点击切换效果 start
+        CMCFMenuBtn();
+        function CMCFMenuBtn(){
+          //1:获取频道按钮元素
+          var menuBtn=document.querySelector("#wrap .head .head-top .menuBtn");
+          //2:获取遮罩层
+          var mask=document.querySelector("#wrap .head .mask");
+          //2.1:创建变量保存状态 频道/X
+          var isXBtn = false;
+          //3:为频道按钮绑定事件 touchstart
+          menuBtn.addEventListener("touchstart",function(ev){
+            ev=ev||event;
+            //3.1:如果是频道显示遮罩层
+            if(isXBtn){
+              webtools.removeClass(menuBtn,"active")
+              mask.style.display="none";//隐藏遮罩层
+            }else{
+              webtools.addClass(menuBtn,"active");
+              mask.style.display="block";//显示遮罩层
+            }
+            isXBtn=!isXBtn;
+            //3.2:如果是X隐藏遮罩层
+            //3.3:修改状态按钮值
+            //########解决事件传递
+            ev.stopPropagation();
+            ev.preventDefault();
+          })
+        
+          //如果点击其它位置则隐藏
+          document.addEventListener("touchstart",function(){
+           //4:如果当前是X按钮
+           if(isXBtn){
+            //4.1:将遮罩层隐藏效果
+            mask.style.display="none";
+            //4.2:将按钮class删除,按钮恢复频道按钮
+            webtools.removeClass(menuBtn,"active");
+            //4.3:切换状态
+            isXBtn=!isXBtn;
+           }
+          })
+
+          //如果点击遮罩层上不隐藏
+          mask.addEventListener("touchstart",function(ev){
+            ev=ev||event;
+            ev.stopPropagation();
+            ev.preventDefault();
+          })
+
+        }//CMCFMenuBtn end
+        //任务一:完成遮罩层点击切换效果 end
+
+
+
+       //任务二:
+       //滑屏 start
+       drag()
+       function drag(){
+         //1:获取滑屏区域
+         var wrap = document.querySelector("#wrap .content .nav");
+        //2:获取滑屏元素
+         var item = document.querySelector("#wrap .content .nav .list");
+         //3:创建变量保存手指开始位置
+         var startX=0;
+         var elementX=0;
+         //4:创建变量保存元素位置
+         //5:为滑屏区域绑定事件 start
+
+         //快速滑屏 version 12
+         //6:创建四个变量
+         //6.1:上一个位置:触发时间
+         var lastTime = 0;
+         //6.2:上一个位置:开始位置
+         var lastPoint = 0;
+         //6.3:时间差:
+         var timeDis = 1;
+         //6.4:位置差:
+         var pointDis = 0;
+
+
+         //边界判断
+         //滑屏区域-滑屏元素=minX
+         var minX = wrap.clientWidth-item.offsetWidth;
+         wrap.addEventListener("touchstart",function(ev){
+            ev=ev||event;
+            var touchC = ev.changedTouches[0];
+            startX=touchC.clientX;
+            elementX=webtools.css(item,"translateX");
+            item.style.transition="none";
+
+            //version 12
+            //获取开始时间与开始位置
+            lastTime = new Date().getTime();
+            lastPoint = webtools.css(item,"translateX");
+            //清除位置差?
+            pointDis = 0;
+         })
+         //6:为滑屏区域绑定事件 move
+         wrap.addEventListener("touchmove",function(ev){
+            ev=ev||event;
+            var touchC = ev.changedTouches[0];
+            var nowX = touchC.clientX;
+            var disX = nowX-startX;
+            var translateX = elementX+disX;
+            //左侧像皮盘效果(当网页显示第一组内容向右滑)
+            //在move 的过程序中
+            //每一次move元素移动距离慢慢变小
+            //0.5 0.4 0.3 ...
+            var vw = document.documentElement.clientWidth;
+            if(translateX>0){//向右移动到边界
+              //scale 拖动距离系数 0.9 0.8..
+              var scale = vw/((vw+translateX)*1.5);
+              //实际移动位置=disX移动距离*系数
+              translateX=elementX+disX*scale;
+            }else if(translateX<minX){//向左移动到边界
+              var over = minX - translateX;
+              //console.log("1:"+over);
+              var scale = vw/((vw+over)*1.5);
+              translateX = elementX+disX*scale;
+            }
+            webtools.css(item,"translateX",translateX);
+            //version 12
+            //获取当前时间点与位置
+            var nowTime = new Date().getTime();
+            var nowPoint = webtools.css(item,"translateX");
+            //计算时间差与位置差
+            //console.log(nowPoint+":"+lastPoint);
+            timeDis = nowTime -  lastTime;
+            pointDis = nowPoint - lastPoint;
+
+            //对上一个点覆盖
+            lastTime = nowTime;
+            lastPoint = nowPoint;
+            //console.log("1:"+pointDis);
+
+         })
+         wrap.addEventListener("touchend",function(ev){
+            ev=ev||event;
+            //1:获取translateX;
+            var translateX = webtools.css(item,"translateX");
+
+           //version 12
+           //计算速度=距离/时间
+           var speed = pointDis/timeDis;
+           //调速度速
+           speed = Math.abs(speed)<0.5?0:speed;
+           var targetX=translateX+speed*200;
+
+           //version 13
+           var bsr = "";
+           if(targetX>0){ //最左侧
+             targetX=0;
+             bsr = "cubic-bezier(.27,1.25,.66,1.57) ";
+           }else if(targetX<minX){ //最右侧
+             targetX=minX;
+             bsr = "cubic-bezier(.27,1.25,.66,1.57) ";
+           }
+           //2:添加过渡1s效果 
+           item.style.transition="1s "+bsr+"transform";
+           webtools.css(item,"translateX",targetX);
+         });
+       }//drag end
+
+
+       //任务三:
+       //点击导航变色
+       changeColor();
+       function changeColor(){
+         //1:获取列表的父元素
+         var list = document.querySelector("#wrap .content .nav .list");
+         //2:获取所有列表中a元素
+         var aNodes = document.querySelectorAll("#wrap .content .nav .list > li a");
+         //3:为父元素绑定事件 touchstart
+         list.addEventListener("touchstart",function(){
+             this.isMove = false;//默认切换
+         });
+         //4:为父元素绑定事件 touchmove
+         list.addEventListener("touchmove",function(){
+             this.isMove = true;//切换滑动
+         });
+         //5:为父元素绑定事件 touchend
+         list.addEventListener("touchend",function(ev){
+           if(this.isMove){
+             return;
+           }
+           ev=ev||event;
+           //5.1:清除所有a元素active
+           for(var i=0;i<aNodes.length;i++){
+             webtools.removeClass(aNodes[i],"active");
+           }
+           //5.2:当前元素添加active 15
+           var touchC = ev.changedTouches[0];
+           //touchC.target 触发事件对象表示A
+           //console.log(touchC.target);
+           webtools.addClass(touchC.target,"active");
+         });
+       }//changeColor end
+
+
+       //任务四:
+       //将前面滑屏组件引入当前网页中
+       swiper();
+       function swiper(){
+         var arr = ["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg"];
+         webtools.carousel(arr);
+       }
+
+       //任务五:标签页
+       tap();
+       function tap(){
+        //1:获取标签页父元素 .tap-wrap
+        //二个wrap 获取其中一个元素宽度
+        var wrap = document.querySelector("#wrap .content .tap-wrap");
+        //2:获取标签页中content元素 
+        //wrap {[loading][标签][loading]} 需要滑动
+        //wrap {[loading][标签][loading]} 需要滑动
+        var contentNodes = document.querySelectorAll("#wrap .content .tap-wrap .tap-content");
+        //3:获取标签页父元素宽度
+        var w = wrap.offsetWidth;
+        //4:创建循环遍历所有content
+        for(var i=0;i<contentNodes.length;i++){
+           move(contentNodes[i]);
+        }
+
+        //移动函数
+        function move(content){
+            //[loading][标签][loading]
+            //0        -w    -2*w
+            //5：将当前content移动中间标签页
+            webtools.css(content,"translateX",-w);
+
+
+            //11:小绿块
+            var now = 0;
+            //11.1:找自己区域内小绿块
+            var smallG = content.parentNode.querySelector(".tap-nav .smallG");
+            //11.2:找自己区域内a
+            var aNodes = content.parentNode.querySelectorAll(".tap-nav a");
+            //11.3:获取第一个a元素宽度赋值小绿块
+            smallG.style.width = aNodes[0].offsetWidth+"px";
+
+            
+            
+
+
+            //6:滑动操作
+            //6.1:创建变量保存点击开始位置
+            var startPoint = {x:0,y:0};
+            //6.2:创建变量保存元素位置
+            var elementPoint = {x:0,y:0};
+            //6.3:创建变量保存水平方向操作
+            var isX = true;
+            //6.4:创建变量保存第一次滑动操作方向 true 水平 false 垂直
+            var isFirst = true;
+            //6.5:为当前content绑定事件touchstart
+
+
+            //version 19
+            //1:是否正在进行跳转操作 内地-->港台
+            //isOver = true 正在跳转操作 [停止多次执行]
+            //isOver = false 没有跳转操作
+            var isOver = false;
+            content.addEventListener("touchstart",function(ev){
+              //第一次拦截:正在跳转时阻止多次执行操作
+              if(isOver){
+                return;
+              }
+               ev = ev||event;
+               var touchC = ev.changedTouches[0];
+               //获取当前手指位置
+               startPoint.x = touchC.clientX;
+               startPoint.y = touchC.clientY;
+               //获取当前元素位置
+               elementPoint.x = webtools.css(content,"translateX");
+               elementPoint.y = webtools.css(content,"translateY");
+               //为isX isFirst 初始值
+               isX = true;
+               isFirst = true;
+               //console.log(startPoint);
+               //console.log(elementPoint);
+            });
+
+            //6.6:为当前content绑定事件touchmove
+            content.addEventListener("touchmove",function(ev){
+                //第二次拦截:正在跳转时阻止多次执行操作
+                if(isOver){
+                  return;
+                }
+
+                //第一次阻止垂直滑动方向
+                if(!isX){
+                  return;
+                }
+                //创建变量保存当前位置创建变量保存距离
+                ev = ev||event;
+                var touchC = ev.changedTouches[0];
+                var nowPoint = {x:0,y:0};
+                var dis = {x:0,y:0};
+                nowPoint.x = touchC.clientX;
+                nowPoint.y = touchC.clientY;
+                //计算距离
+                dis.x = nowPoint.x - startPoint.x;
+                dis.y = nowPoint.y - startPoint.y;
+                //判断
+                //-判断是否是首次滑
+                //-将isFrist=false
+                //-取绝对值判断二个水平方向和垂直方向距离
+                //-如果垂直方向距离大 isX=false return;
+                if(isFirst){
+                  isFirst = false;
+                  if(Math.abs(dis.y)>Math.abs(dis.x)){
+                    isX= false;
+                    return;
+                  }
+                }
+                //获取新位置
+                var transalteX = elementPoint.x+dis.x;
+                //为content指定translateX值
+                webtools.css(content,"translateX",transalteX);
+
+                //version 19
+                //跳转不同标签函数
+                jump(dis.x);
+            });
+            //6.7:为当前content绑定事件touchend
+            content.addEventListener("touchend",function(ev){
+              //第三次阻止:正在跳转时阻止多次执行操作
+              if(isOver){
+                return;
+              }
+              ev = ev||event;
+              var touchC = ev.changedTouches[0];
+
+              //创建二个变量保存新位置与距离
+              var nowPoint = {x:0,y:0};
+              var dis = {x:0,y:0};
+              //获取位置与距离
+              nowPoint.x = touchC.clientX;
+              dis.x = nowPoint.x-startPoint.x;
+              //console.log(dis.x);
+              //是否超过一半
+              if(Math.abs(dis.x)>w/2){
+                content.style.transition = "1s transform";
+                webtools.css(content,"translateX",-w);
+              }
+              //11:55
+            });
+
+            //version 19 跳转函数
+            function jump(disX){
+               //第四拦截:正在跳转时阻止多次执行操作
+               if(isOver){
+                 return;
+               }
+               //console.log(disX);
+               if(Math.abs(disX)>w/2){
+                 isOver = true;
+                 //右滑显示[0]
+                 //左滑显示[-2*w];
+                 var transalteX = disX>0?0:-w*2;
+                 content.style.transition="1s transform";
+                 webtools.css(content,"translateX",transalteX);
+
+
+                 //任务动态加载数据
+                 //1:为content元素绑定事件过渡结束
+                 content.addEventListener("transitionend",endFn);
+                 content.addEventListener("webkitTansitionEnd",endFn);
+                 //2:创建函数 endFn
+                 function endFn(){
+                  //console.log(123); 
+                  //2.1:清除绑定事件
+                  content.removeEventListener("transitionend",endFn);
+                  content.removeEventListener("webkitTansitionEnd",endFn);
+                  //2.2:清除过渡效果
+                  content.style.transition="none";
+                  //2.3:将所有loading 显示
+                  var loadings = document.querySelectorAll("#wrap .content .tap-wrap .tap-content .tap-loading");
+                  //console.log(loadings.length)
+                  for(var i=0;i<loadings.length;i++){
+                    loadings[i].style.opacity=1;
+                  }
+                  //11.5:获取滑动方向
+                  //console.log(disX);
+                  disX>0?now--:now++;
+                  //11.6:边界判断 <0 最后  
+                  //             >最后 0
+                  if(now<0){
+                    now = aNodes.length-1;
+                  }else if(now>aNodes.length-1){
+                    now = 0;
+                  }
+                  //console.log(now);
+                  //11.7:滑动小绿块位置
+                  webtools.css(smallG,"translateX",aNodes[now].offsetLeft);
+                  //11.8:重新计算小绿块宽度 
+                  if(aNodes[now].offsetWidth != smallG.offsetLeft){
+                    smallG.style.width = aNodes[now].offsetWidth+"px";
+                  }            
+                  //2.4:发送ajax请求获取动态数据使用setTimeout替换
+                  //2.5:接收服务器返回数据
+                  setTimeout(function(){
+                  //2.6:将loading隐藏
+                  for(var i=0;i<loadings.length;i++){
+                    loadings[i].style.opacity=0;
+                  }
+                  webtools.css(content,"translateX",-w);
+                  //2.7:isOver = false;  //允许再次跳转
+                  isOver = false;
+                  },2000)
+
+                 }
+               }
+            }
+        }
+       }
+
+       //任务六:垂直滑屏操作
+       yMove();
+       function yMove(){
+         //6.1:获取content元素垂直滑屏区域
+         var content = document.querySelector("#wrap .content");
+
+         var head = document.querySelector("#wrap .head");
+         var hh = head.offsetLeft;
+         var wrap = document.querySelector("#wrap .content > div");
+         var bar = document.querySelector("#wrap .scrollBar");
+         //滚动条高度与位置算法
+         //bar/视口 = 视口/内容
+         var vh = document.documentElement.clientHeight;
+         var scale = vh/(head.offsetHeight+wrap.offsetHeight);
+         bar.style.height = vh*scale+"px";
+         //debugger;
+         //1:手指点击时显示滚动条
+         //2:手指抬起时隐藏滚动条
+         //3:默认隐藏
+         var callBack = {
+            start:function(){
+              bar.style.opacity = 1;
+            },
+            end:function(){
+              bar.style.opacity = 0;
+            },
+            move:function(){
+              var scale = webtools.css(this,"translateY")/(wrap.offsetHeight-content.clientHeight);
+              //实时距离/最大距离
+              webtools.css(bar,"translateY",-scale*(vh-bar.offsetHeight));
+            }
+
+         };
+         webtools.yMove(content,callBack);
+       } 
+       }//window.onload end    
+    </script>
+</body>
+</html>
